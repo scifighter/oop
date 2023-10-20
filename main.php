@@ -9,16 +9,30 @@ class planes {
     private int $maxspeed;
     private bool $inTheAir;
 
-    private function takeoff() {
+    public function __construct($name, $maxspeed, $inTheAir)
+    {
+        $this->name = $name;
+        $this->maxspeed = $maxspeed;
+        $this->inTheAir = $inTheAir;
+    }
+
+    public function takeoff() 
+    {
         echo "Взлететь";
+        $inTheAir = true;
     }
-    private function alighting() {
+    public function alighting() 
+    {
         echo "Приземлиться";
+        $inTheAir = false;
     }
-    private function getStatus() {
-        if ($inTheAir == true) {
+    public function getStatus() 
+    {
+        if ($inTheAir == true) 
+        {
             echo "Самолёт в воздухе";
-        } else {
+        } else 
+        {
             echo "Самолёт на земле";
         }
     }
