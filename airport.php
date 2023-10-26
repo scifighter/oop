@@ -1,7 +1,7 @@
 <?php
 
-class airport
-{
+class Airport {
+    
     private $planesOnPort;
     private $planesOnParking;
     

@@ -3,36 +3,30 @@
 include_once "airport.php";
 include_once "planes.php";
 
-class planes {
+class Plane {
 
     private string $name;
     private int $maxspeed;
     private bool $inTheAir;
 
-    public function __construct($name, $maxspeed, $inTheAir)
-    {
+    public function __construct($name, $maxspeed, $inTheAir) {
         $this->name = $name;
         $this->maxspeed = $maxspeed;
         $this->inTheAir = $inTheAir;
     }
 
-    public function takeoff() 
-    {
+    public function takeoff() {
         echo "Взлететь";
         $inTheAir = true;
     }
-    public function alighting() 
-    {
+    public function alighting() {
         echo "Приземлиться";
         $inTheAir = false;
     }
-    public function getStatus() 
-    {
-        if ($inTheAir == true) 
-        {
+    public function getStatus() {
+        if ($inTheAir == true) {
             echo "Самолёт в воздухе";
-        } else 
-        {
+        } else {
             echo "Самолёт на земле";
         }
     }
