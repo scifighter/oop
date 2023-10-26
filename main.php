@@ -1,7 +1,8 @@
 <?php
 
-include_once "airport.php";
-include_once "planes.php";
+include_once "Airport.php";
+include_once "Mig.php";
+include_once "Tu.php";
 
 class Plane {
 
