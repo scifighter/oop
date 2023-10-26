@@ -1,7 +1,7 @@
 <?php
 
 class Airport {
-    
+
     private $planesOnPort;
     private $planesOnParking;
     
@@ -14,12 +14,12 @@ class Airport {
     public function takePlane()
     {
         $this->planesOnPort++;
-        alighting(); // Не понял как правильно использовать функцию, по отношению к конкретному объекту самолёта
+        Plane::alighting(); // Не понял как правильно использовать функцию, по отношению к конкретному объекту самолёта
         return "Самолет принят, самолётов в аэропорте: ".$this->planesOnPort;
     }
     public function letPlane()
     {   
-        takeoff();
+        Plane::takeoff();
         $this->planesOnPort--;
         return "Самолёт взлетел, самолётов в аэропорте: ".$this->planesOnPort;
     }
@@ -43,6 +43,6 @@ class Airport {
 
     public function destructAllPlanes()
     {
-        unset($planes);
+        unset($plane    );
     }
 }

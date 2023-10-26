@@ -15,11 +15,11 @@ class Plane {
         $this->inTheAir = $inTheAir;
     }
 
-    public function takeoff() {
+    public static function takeoff() {
         echo "Взлететь";
         $inTheAir = true;
     }
-    public function alighting() {
+    public static function alighting() {
         echo "Приземлиться";
         $inTheAir = false;
     }
